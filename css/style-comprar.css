@@ -1,0 +1,138 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FBF8F6;
+    height: 80px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #176D5A;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FBF8F6;
+    padding-top: 80px;
+}
+
+.logo {
+    height: 56px;
+}
+
+.banner-compra {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.banner-compra h1 {
+    color: #176D5A;
+}
+
+.banner-compra p {
+    color: #555;
+}
+
+.compra-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.resumo-pedido,
+.dados-compra {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.resumo-pedido img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.resumo-pedido h2,
+.dados-compra h2 {
+    color: #176D5A;
+}
+
+.total {
+    color: #9C2576;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.pagamento {
+    margin-top: 10px;
+}
+
+.pagamento label {
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.botao-finalizar {
+    display: inline-block;
+    margin-top: 25px;
+    background: #24D17A;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.botao-finalizar:hover {
+    background: #1aa964;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+
+    .compra-container {
+        flex-direction: column;
+    }
+}

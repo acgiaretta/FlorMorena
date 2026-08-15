@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra | Flor Morena</title>
+    <link rel="stylesheet" href="/css/style-comprar.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/Logotipomenor.png" alt="Logo Flor Morena" class="logo">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="banner-compra">
+        <h1>Finalizar Compra</h1>
+        <p>Preencha seus dados para concluir o pedido.</p>
+    </section>
+
+    <section class="compra-container">
+        <div class="resumo-pedido">
+            <h2>Resumo do Pedido</h2>
+            <img src="assets/conjunto azul.jpg" alt="Produto">
+            <h3>Azul Royal: Energia e Destaque</h3>
+            <p>Preço: R$ 390,00</p>
+            <p>Quantidade: 1</p>
+            <p class="total">Total: R$ 390,00</p>
+        </div>
+
+        <div class="dados-compra">
+            <h2>Dados do Cliente</h2>
+            <form>
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Digite seu nome">
+                <label>Email</label>
+                <input type="email" placeholder="Digite seu email">
+                <label>Telefone</label>
+                <input type="tel" placeholder="(00) 00000-0000">
+                <label>Endereço</label>
+                <input type="text" placeholder="Rua, número e bairro">
+                <label>Forma de Pagamento</label>
+                <div class="pagamento">
+                    <label>
+                        <input type="radio" name="pagamento">
+                        Pix
+                    </label>
+                    <label>
+                        <input type="radio" name="pagamento">
+                        Cartão de Crédito
+                    </label>
+                    <label>
+                        <input type="radio" name="pagamento">
+                        Cartão de Débito
+                    </label>
+                    <label>
+                        <input type="radio" name="pagamento">
+                        Boleto
+                    </label>
+                </div>
+                <a href="#" class="botao-finalizar">
+                    Finalizar Pedido
+                </a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

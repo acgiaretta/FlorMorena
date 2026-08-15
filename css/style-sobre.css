@@ -1,0 +1,251 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FBF8F6;
+    height: 80px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 10px 8px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #176D5A;
+    font-weight: bold;
+    margin-left: 24px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #24D17A;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FBF8F6;
+    padding-top: 80px;
+}
+
+.logo {
+    height: 56px;
+    width: auto;
+    display: block;
+}
+
+.banner-sobre {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.banner-sobre h1 {
+    color: #176D5A;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-sobre p {
+    color: #555;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sobre-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: justify;
+}
+
+.sobre-texto h1 {
+    color: #176D5A;
+    margin-bottom: 15px;
+}
+
+.sobre-texto p {
+    color: #444;
+    line-height: 1.7;
+    text-indent: 20px;
+}
+
+.missao {
+    background: #FBF0F5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 5px solid #9C2576;
+}
+
+.sobre-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.historia-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.historia-container h2 {
+    color: #176D5A;
+    margin-bottom: 15px;
+}
+
+.historia-container p {
+    color: #444;
+    line-height: 1.7;
+    text-indent: 20px;
+}
+
+.valores {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.valores li {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.secao-chamada {
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.secao-chamada h3 {
+    color: #176D5A;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.botao-principal {
+    background: #24D17A;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: #1fb56a;
+}
+
+footer {
+    background-color: #176D5A;
+    padding: 12px 0;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-centro p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-direita {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-direita img {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    header nav {
+        margin-left: 0;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+
+    .banner-sobre h1 {
+        font-size: 28px;
+    }
+
+    .banner-sobre p {
+        font-size: 16px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto {
+        width: 100%;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+    }
+
+    .sobre-imagem img {
+        max-width: 320px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
