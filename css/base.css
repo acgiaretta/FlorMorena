@@ -37,10 +37,16 @@ header nav a {
     font-weight: bold;
     margin-left: 24px;
     transition: 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
 header nav a:hover {
     color: #24D17A;
+}
+
+header nav a.ativo {
+    color: #24D17A;
+    border-bottom-color: #24D17A;
 }
 
 .logo {
