@@ -79,6 +79,9 @@ input[type="tel"] {
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .botao-finalizar:hover {
