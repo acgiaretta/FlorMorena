@@ -124,7 +124,7 @@
 }
 
 .produto-card h4 {
-    margin: 6px 0 4px 0;
+    margin: 6px 0 4px;
     color: #176D5A;
     font-size: 16px;
     height: 40px;
@@ -137,6 +137,7 @@
     margin-bottom: 20px;
 }
 
+/* Regras responsivas APENAS para o conteúdo da página (banner, vitrine, etc) */
 @media (max-width: 768px) {
 
     .banner {
@@ -148,7 +149,7 @@
     .img-banner {
         width: 100%;
         max-width: 350px;
-        margin: 20px 0 0 0;
+        margin: 20px 0 0;
     }
 
     .diferenciais {
@@ -160,5 +161,4 @@
         flex-direction: column;
         align-items: center;
     }
-
 }

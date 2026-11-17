@@ -92,6 +92,52 @@
 }
 
 @media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 15px 20px;
+        /* Removido o flex-direction: column para o botão ficar na mesma linha da logo */
+        /* Como o header é flex-wrap: wrap, os itens vão quebrar de linha se faltar espaço */
+        /* IMPORTANTE: Aqui definimos que o cabeçalho no móvel vai arrumar os itens em bloco (wrap) */
+        flex-wrap: wrap; 
+        justify-content: space-between;
+    }
+
+    #btn-menu {
+        display: block; /* Mostra o botão hambúrguer no celular */
+        /* Tira o botão de cima da logo */
+        order: 1;
+    }
+
+    header img.logo, .logo {
+        /* Garante que a logo partilha a mesma linha do botão no topo */
+        order: 2; 
+        margin-right: 0; /* Remove a margem extra que empurrava tudo no desktop */
+    }
+
+    header nav {
+        display: none; /* Esconde o menu por padrão */
+        width: 100%; /* Força o menu a ocupar toda a linha abaixo da logo */
+        /*flex-direction: column;
+        margin-left: 0;*/
+        margin-top: 15px;
+        order: 3; /* Diz ao menu para ficar em último lugar (por baixo) */
+    }
+
+    /* Classe que será adicionada pelo JavaScript (script.js) */
+    header nav.ativo {
+        display: flex;
+        flex-direction: column; /* Coloca um link embaixo do outro */
+        align-items: center;    /* Centraliza os links na tela */
+    }
+
+    header nav a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    
     .produto-detalhe {
         flex-direction: column;
     }
