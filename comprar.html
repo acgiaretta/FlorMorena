@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Compra | Flor Morena</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/style-comprar.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finalizar Compra | Flor Morena</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/style-comprar.css">
+        <script src="js/script.js" defer="defer"></script>
 
-<body>
-    <header>
-        <img src="assets/logotipomenor.png" alt="Logo Flor Morena" class="logo">
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="produtos.html" class="ativo">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
+    </head>
 
-    <section class="banner-compra">
-        <h1>Finalizar Compra</h1>
-        <p>Preencha seus dados para concluir o pedido.</p>
-    </section>
+    <body>
+        <header>
+            <button id="btn-menu">☰
+            </button>
+            <img src="assets/logotipomenor.png" alt="Logo Flor Morena" class="logo">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="produtos.html" class="ativo">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </header>
 
-    <section class="compra-container">
-        <div class="resumo-pedido">
-            <h2>Resumo do Pedido</h2>
-            <img src="assets/conjunto-azul.jpg" alt="Produto">
-            <h3>Azul Royal: Energia e Destaque</h3>
-            <p>Preço: R$ 390,00</p>
-            <p>Quantidade: 1</p>
-            <p class="total">Total: R$ 390,00</p>
-        </div>
+        <section class="banner-compra">
+            <h1>Finalizar Compra</h1>
+            <p>Preencha seus dados para concluir o pedido.</p>
+        </section>
 
-        <div class="dados-compra">
-            <h2>Dados do Cliente</h2>
-            <form>
-                <label for="nome-completo">Nome Completo</label>
-                <input type="text" id="nome-completo" name="nome" placeholder="Digite seu nome" required>
+        <section class="compra-container">
+            <div class="resumo-pedido">
+                <h2>Resumo do Pedido</h2>
+                <img src="assets/conjunto-azul.jpg" alt="Produto">
+                <h3>Azul Royal: Energia e Destaque</h3>
+                <p>Preço: R$ 390,00</p>
+                <p>Quantidade: 1</p>
+                <p class="total">Total: R$ 390,00</p>
+            </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            <div class="dados-compra">
+                <h2>Dados do Cliente</h2>
+                <form>
+                    <label for="nome-completo">Nome Completo</label>
+                    <input
+                        type="text"
+                        id="nome-completo"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required="required">
 
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required="required">
 
-                <label for="endereco">Endereço</label>
-                <input type="text" id="endereco" name="endereco" placeholder="Rua, número e bairro" required>
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        required="required">
 
-                <label>Forma de Pagamento</label>
-                <div class="pagamento">
-                    <label><input type="radio" name="pagamento" value="pix" required> Pix</label>
-                    <label><input type="radio" name="pagamento" value="credito"> Cartão de Crédito</label>
-                    <label><input type="radio" name="pagamento" value="debito"> Cartão de Débito</label>
-                    <label><input type="radio" name="pagamento" value="boleto"> Boleto</label>
+                    <label for="endereco">Endereço</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        placeholder="Rua, número e bairro"
+                        required="required">
+
+                    <label>Forma de Pagamento</label>
+                    <div class="pagamento">
+                        <label><input type="radio" name="pagamento" value="pix" required="required">
+                            Pix</label>
+                        <label><input type="radio" name="pagamento" value="credito">
+                            Cartão de Crédito</label>
+                        <label><input type="radio" name="pagamento" value="debito">
+                            Cartão de Débito</label>
+                        <label><input type="radio" name="pagamento" value="boleto">
+                            Boleto</label>
+                    </div>
+
+                    <button type="submit" class="botao-finalizar">Finalizar Pedido</button>
+                </form>
+            </div>
+        </section>
+            <button id="btn-topo">↑ Topo</button>
+
+        <!--Rodapé-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-centro">
+                    <p>© 2025 Flor Morena — Todos os direitos reservados.</p>
                 </div>
-                
-                <button type="submit" class="botao-finalizar">Finalizar Pedido</button>
-            </form>
-        </div>
-    </section>
-
-    <!--Rodapé-->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-centro">
-                <p>© 2025 Flor Morena — Todos os direitos reservados.</p>
+                <div class="footer-direita">
+                    <a
+                        href="https://www.instagram.com/flormorena_lins"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="assets/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/5514998982320" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/whatsapp.png" alt="WhatsApp">
+                    </a>
+                </div>
             </div>
-            <div class="footer-direita">
-                <a href="https://www.instagram.com/flormorena_lins" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://wa.me/5514998982320" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/whatsapp.png" alt="WhatsApp">
-                </a>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>

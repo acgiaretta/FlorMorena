@@ -3,10 +3,11 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #FBF8F6;
-    padding-top: 80px; /*espaço pro cabeçalho fixo não cobrir o conteúdo*/
+    padding-top: 80px;
+    /* espaço pro cabeçalho fixo não cobrir o conteúdo */
 }
 
-/*Cabeçalho e menu*/
+/* Cabeçalho e menu */
 header {
     position: fixed;
     top: 0;
@@ -17,15 +18,25 @@ header {
     padding: 0 40px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    /* Alinha os itens a partir da esquerda */
     box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
+.logo {
+    height: 56px;
+    width: auto;
+    display: block;
+    margin-right: auto;
+    /* O segredo está aqui: funciona como uma mola que empurra o menu todo para a direita! */
+}
+
 header nav {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    /* Removemos o margin-left daqui, pois a logo já está empurrando */
 }
 
 header nav a {
@@ -40,22 +51,24 @@ header nav a {
     border-bottom: 2px solid transparent;
 }
 
+header nav a.ativo,
 header nav a:hover {
-    color: #24D17A;
-}
-
-header nav a.ativo {
     color: #24D17A;
     border-bottom-color: #24D17A;
 }
 
-.logo {
-    height: 56px;
-    width: auto;
-    display: block;
+/* Estilo do botão do menu (escondido no desktop) */
+#btn-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #176D5A;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 5px;
 }
 
-/*Rodapé*/
+/* Rodapé */
 footer {
     background-color: #176D5A;
     padding: 12px 0;
@@ -87,19 +100,89 @@ footer {
     height: 35px;
 }
 
-/*Celular e tablet*/
+#btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    /* O JavaScript vai controlar quando ele aparece */
+    background-color: #24D17A;
+    /* Verde vibrante da marca */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* Botão em formato de pílula/arredondado */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombrinha para destacar */
+    z-index: 999;
+    /* Garante que fique acima de outras imagens e do rodapé */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btn-topo:hover {
+    background-color: #176D5A;
+    /* Fica verde escuro ao passar o mouse */
+    transform: translateY(-3px);
+    /* Dá um pequeno pulinho para cima */
+}
+
+/* Celular e tablet */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
         height: auto;
-        padding: 15px;
+        padding: 15px 20px;
+        /* Removido o flex-direction: column para o botão ficar na mesma linha da logo */
+        /* Como o header é flex-wrap: wrap, os itens vão quebrar de linha se faltar espaço */
+        /* IMPORTANTE: Aqui definimos que o cabeçalho no móvel vai arrumar os itens em bloco (wrap) */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #btn-menu {
+        display: block;
+        /* Mostra o botão hambúrguer no celular */
+        /* Tira o botão de cima da logo */
+        order: 1;
+    }
+
+    .logo,
+    header img.logo {
+        /* Garante que a logo partilha a mesma linha do botão no topo */
+        order: 2;
+        margin-right: 0;
+        /* Remove a margem extra que empurrava tudo no desktop */
     }
 
     header nav {
+        display: none;
+        /* Esconde o menu por padrão */
+        width: 100%;
+        /* Força o menu a ocupar toda a linha abaixo da logo */
+        /*flex-direction: column;
+        margin-left: 0;*/
+        margin-top: 15px;
+        order: 3;
+        /* Diz ao menu para ficar em último lugar (por baixo) */
+    }
+
+    /* Classe que será adicionada pelo JavaScript (script.js) */
+    header nav.ativo {
+        display: flex;
+        flex-direction: column;
+        /* Coloca um link embaixo do outro */
+        align-items: center;
+        /* Centraliza os links na tela */
+    }
+
+    header nav a {
         margin-left: 0;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
     }
 
     body {
